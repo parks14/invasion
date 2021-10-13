@@ -1,0 +1,20 @@
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2%;
+    margin-right: 27%;
+    gap: 2%;
+}
+
+.container {
+    border: 2px solid black;
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* keeep container in the center of page */
+    /* if i use positive nums, it translates x,y right and down */
+    transform: translate(-50%, -50%);
+    background-image: url('../src/assets/bg.png');
+}
