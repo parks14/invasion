@@ -20,14 +20,11 @@ In addition, this project will include:
 
 ![Wireframe Image](/src/assets/wireframe.png)
 
-- Nav links include links to my LinkedIn, project's Github, and maybe a personal website(in the future)
-- In the center top, the main interactive amination will be rendered.
-- In the center bottom, the each step (direction) in the recipe will be rendered.
-- A clickable menu option will be on the top right corner for user to navigate to a different recipe.
-- A symbol will display the instruction when hovered over.
-- Clickable symbol that controls audio settings.
-- Clickable button to restart from step one.
-- Clickable back button to take user to the last step.
+- Nav links include links to my LinkedIn and project's Github
+- The main game board will be displayed on the center of the page
+- Start button user can click to start the game
+- Scrore count kept on the bottom right corner
+- Count of time left displayed on the top left corner
 
 ## Technologies, Libraries, APIs
 
