@@ -7,7 +7,7 @@
 }
 
 .container {
-    border: 2px solid black;
+    border: 2px solid #32a852;
     width: 900px;
     height: 600px;
     position: absolute;
@@ -17,4 +17,21 @@
     /* if i use positive nums, it translates x,y right and down */
     transform: translate(-50%, -50%);
     background-image: url('../src/assets/bg.png');
+}
+
+.score {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #72A276;
+    background-color: #666B6A;
+    width: 120px;
+    height: 70px;
+    color: #86CD82;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }
