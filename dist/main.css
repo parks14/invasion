@@ -24,7 +24,7 @@
 
 .score {
   font-size: 60px;
-  color: #86CD82;
+  color: #8AE9C1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +46,7 @@
   margin-right: 7%;
   margin-bottom: 12%;
   font-size: 20px;
-  color: #666B6A;
+  color: #8AE9C1;
   font-weight: bold;
 }
 
@@ -58,7 +58,7 @@
   border: 2px solid #72A276;
   background-color: #666B6A;
   font-size: 60px;
-  color: #86CD82;
+  color: #8AE9C1;
   width: 10%;
   height: 12%;
   margin-left: 3%;
@@ -70,6 +70,21 @@
   margin-left: 4.5%;
   margin-top: 12%;
   font-size: 20px;
-  color: #86CD82;
+  color: #8AE9C1;
   font-weight: bold;
+}
+
+.start {
+  background-color: #666B6A;
+  color: #8AE9C1;
+  font-size: 22px;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 1%;
+  padding: 12px 40px;
+  border-radius: 4px;
+  border: 2px solid #72A276;
+  cursor: pointer;
 }
