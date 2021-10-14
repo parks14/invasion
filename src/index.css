@@ -36,6 +36,17 @@
     margin-bottom: 3%;
 }
 
+.score-text {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    margin-right: 7%;
+    margin-bottom: 12%;
+    font-size: 20px;
+    color: #666B6A;
+    font-weight: bold;
+}
+
 .timer {
     position: absolute;
     display: flex;
@@ -49,4 +60,13 @@
     height: 12%;
     margin-left: 3%;
     margin-top: 3%;
+}
+
+.timer-text {
+    position: absolute;
+    margin-left: 4.5%;
+    margin-top: 12%;
+    font-size: 20px;
+    color: #86CD82;
+    font-weight: bold;
 }
