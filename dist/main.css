@@ -105,7 +105,8 @@
 .bush1, .bush2 {
   border: 1px solid black;
   flex-grow: 1;
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
+  /* tried basis 33% but some reason it was overflowing and not creating 2 rows of 3 columns */
   flex-basis: 30%;
 }
 
