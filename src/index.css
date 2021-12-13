@@ -94,7 +94,7 @@
     display: flex;
     width: 600px;
     height: 400px;
-    margin: 120px auto;
+    margin: 180px auto;
     flex-wrap: wrap;
     z-index: 2;
 }
