@@ -9,6 +9,10 @@
   gap: 2%;
 }
 
+.fab {
+  color: black;
+}
+
 .container {
   border: 2px solid #32a852;
   width: 900px;
@@ -28,7 +32,7 @@
   justify-content: center;
   align-items: center;
   border: 2px solid #72A276;
-  background-color: #666B6A;
+  background-color: #264653;
   width: 15%;
   height: 10%;
   position: absolute;
@@ -55,7 +59,7 @@
   justify-content: center;
   align-items: center;
   border: 2px solid #72A276;
-  background-color: #666B6A;
+  background-color: #264653;
   font-size: 60px;
   color: #8AE9C1;
   width: 10%;
@@ -74,7 +78,7 @@
 }
 
 .start {
-  background-color: #666B6A;
+  background-color: #264653;
   color: #8AE9C1;
   font-size: 22px;
   position: absolute;
