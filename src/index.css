@@ -13,8 +13,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    /* keeep container in the center of page */
-    /* if i use positive nums, it translates x,y right and down */
     transform: translate(-50%, -50%);
     background-image: url('../src/assets/bg.png');
     z-index: -1;
@@ -79,7 +77,6 @@
     position: absolute;
     bottom: 0%;
     left: 50%;
-    /* if i translate -50% -50%  */
     transform: translate(-50%, -30%);
     margin-top: 2%;
     padding: 12px 40px;
@@ -90,7 +87,6 @@
 }
 
 .game-board {
-    /* border: 1px solid black; */
     display: flex;
     width: 600px;
     height: 400px;
@@ -99,38 +95,30 @@
     z-index: 2;
 }
 
-.bush1, .bush2 {
-    /* border: 1px solid black; */
+.bush {
     flex-grow: 1;
-    /* flex-shrink: 0; */
-    /* tried basis 33% but some reason it was overflowing and not creating 2 rows of 3 columns */
     flex-basis: 30%;
     position: relative;
+    overflow: hidden;
 }
 
-/* adds pseudo elements to the selected ele. Can style text or images in content in any way */
-.bush1:after {
+.bush:after {
     content: '';
     position: absolute;
     display: block;
+    width: 100%;
+    height: 100px;
+    bottom: -20px;
+    background-size: contain;
+    z-index: 5;
+}
+
+.bush.b1:after, .bush.b3:after, .bush.b5:after {
     background-image: url(../src/assets/bush.png);
-    width: 100%;
-    height: 100px;
-    bottom: -20px;
-    background-size: contain;
-    z-index: 5;
 }
 
-.bush2:after {
-    content: '';
-    position: absolute;
-    display: block;
+.bush.b2:after, .bush.b4:after, .bush.b6:after {
     background-image: url(../src/assets/berrybush.png);
-    width: 100%;
-    height: 100px;
-    bottom: -20px;
-    background-size: contain;
-    z-index: 5;
 }
 
 .monster {
@@ -140,7 +128,7 @@
     background-position: 50% 60%;
     width: 100%;
     height: 100%;
-    /* top: 0; */
+    top: 100%;
     transition: .5s;
 }
 
@@ -150,4 +138,8 @@
 
 .monster.front {
     background-size: 75%;
+}
+
+.bush.up .monster {
+    top: 0;
 }
