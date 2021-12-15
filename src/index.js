@@ -1,3 +1,5 @@
+import Game from './scripts/game';
+
 document.addEventListener("DOMContentLoaded", () => {
-    console.log('webpack working');
+    const game = new Game();
 })
