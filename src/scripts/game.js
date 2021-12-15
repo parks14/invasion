@@ -1,10 +1,11 @@
 import Monster from './monster';
 
+export let timeOut = false;
+
 export default class Game {
     constructor() {
         this.monster = new Monster();
         this.time = 20000;
-        this.timeOut = false;
         this.score = 0;
     }
 
@@ -14,12 +15,12 @@ export default class Game {
         const timerBoard = document.querySelector('.timer');
         scoreBoard.textContent = 0;
         timerBoard.textContent = timer;
-        this.timeOut = false
+        timeOut = false
         this.score = 0;
         this.monster.showUp();
 
         setTimeout(function(){
-            this.timeOut = true;
+            timeOut = true;
         }, this.time);
 
         let startTimer = setInterval(function(){
@@ -28,7 +29,7 @@ export default class Game {
             if (timer < 0) {
                 timer = 0;
                 clearInterval(startTimer);
-                timerBoard.textContent = 'TIMES UP!'
+                // timerBoard.textContent = 'TIMES UP!'
             } 
         }, 1000);
     }

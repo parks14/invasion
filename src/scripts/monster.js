@@ -1,9 +1,9 @@
 import Bush from './bush';
+import { timeOut } from './game';
 
 export default class Monster {
     constructor() {
         this.bush = new Bush();
-        this.timeOut = false;
     }
 
     showUp() {
@@ -12,14 +12,13 @@ export default class Monster {
         let bush = this.bush.chooseRandomBush(bushes);
         bush.classList.add("up");
 
-
         setTimeout(() => {
             bush.classList.remove("up");
-            if (!this.timeOut) {
+            if (!timeOut) {
                 this.showUp();
             }
         }, time);
-        
+
     }
 
 
