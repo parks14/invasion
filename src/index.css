@@ -136,6 +136,10 @@
     transition: .5s;
 }
 
+.monster:hover {
+    cursor: url(../src/assets/hammer.png), auto;
+}
+
 .monster.back {
     background-size: 60%;
 }
