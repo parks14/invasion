@@ -11,8 +11,8 @@ export default class Game {
 
     start() {
         let timer = this.time/1000;
-        const scoreBoard = document.querySelector('.score');
         const timerBoard = document.querySelector('.timer');
+        const scoreBoard = document.querySelector('.score');
         scoreBoard.textContent = 0;
         timerBoard.textContent = timer;
         timeOut = false
@@ -46,19 +46,25 @@ export default class Game {
     addListenerForWhack() {
         const monsters = document.querySelectorAll('.monster');
         let that = this;
-
+        
         monsters.forEach(monster => {
             monster.addEventListener('click', e => {
-                console.log(e)
                 e.preventDefault;
                 that.whack(e);
             })
         })
     }
-
+    
     whack(e) {
+        const scoreBoard = document.querySelector('.score');
         this.score += 10;
         e.target.style.backgroundImage = 'url(./src/assets/flower_white.png)';
+        
+        setTimeout(() => {
+            e.target.style.backgroundImage = 'url(./src/assets/flower_yellow.png)';
+        }, 1100)
+        
+        scoreBoard.textContent = this.score;
     }
 
 }
