@@ -59,9 +59,11 @@ export default class Game {
         const scoreBoard = document.querySelector('.score');
         this.score += 10;
         e.target.style.backgroundImage = 'url(./src/assets/flower_white.png)';
+        e.target.style.pointerEvents = 'none';
         
         setTimeout(() => {
             e.target.style.backgroundImage = 'url(./src/assets/flower_yellow.png)';
+            e.target.style.pointerEvents = 'all';
         }, 1100)
         
         scoreBoard.textContent = this.score;
