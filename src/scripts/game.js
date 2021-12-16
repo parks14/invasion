@@ -29,7 +29,7 @@ export default class Game {
             if (timer < 0) {
                 timer = 0;
                 clearInterval(startTimer);
-                // timerBoard.textContent = 'TIMES UP!'
+                timerBoard.textContent = '0'
             } 
         }, 1000);
     }
@@ -41,6 +41,24 @@ export default class Game {
             e.preventDefault();
             that.start();
         });
+    }
+
+    addListenerForWhack() {
+        const monsters = document.querySelectorAll('.monster');
+        let that = this;
+
+        monsters.forEach(monster => {
+            monster.addEventListener('click', e => {
+                console.log(e)
+                e.preventDefault;
+                that.whack(e);
+            })
+        })
+    }
+
+    whack(e) {
+        this.score += 10;
+        e.target.style.backgroundImage = 'url(./src/assets/flower_white.png)';
     }
 
 }

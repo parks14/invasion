@@ -1,10 +1,6 @@
 // const bushes = document.querySelectorAll(".bush");
 
 export default class Bush {
-    // constructor() {
-    //     this.bush = this.chooseRandomBush();
-    // }
-
     chooseRandomBush(bushes) {
         let lastBush;
 
