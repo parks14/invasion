@@ -5,11 +5,15 @@ export let timeOut = false;
 export default class Game {
     constructor() {
         this.monster = new Monster();
-        this.time = 20000;
+        this.time = 30000;
         this.score = 0;
+        this.level = 1;
     }
 
     start() {
+        const startGame = document.querySelector('.start-game');
+        startGame.style.display = 'none';
+
         let timer = this.time/1000;
         const timerBoard = document.querySelector('.timer');
         const scoreBoard = document.querySelector('.score');
@@ -64,7 +68,7 @@ export default class Game {
         setTimeout(() => {
             e.target.style.backgroundImage = 'url(./src/assets/flower_yellow.png)';
             e.target.style.pointerEvents = 'all';
-        }, 1100)
+        }, 1000)
         
         scoreBoard.textContent = this.score;
     }

@@ -1,26 +1,89 @@
 /*!************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.css ***!
   \************************************************************************************************************************************/
-.logo {
+body {
+  background-color: #264653;
+}
+
+.header {
+  font-family: "BakBak One", cursive;
+  font-size: 30px;
+  color: #264653;
   display: flex;
-  justify-content: flex-end;
-  margin-top: 2%;
-  margin-right: 27%;
-  gap: 2%;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: #5BAF43;
+  padding: 0 20px 0 50px;
+}
+
+.logo > a {
+  padding: 0 10px;
+}
+
+.angellist > img {
+  width: 22px;
 }
 
 .fab {
   color: black;
 }
 
-.container {
-  border: 2px solid #32a852;
+.start-game, .container, .last-wave {
   width: 900px;
   height: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.start-game {
+  font-family: "Bakbak One", cursive;
+  text-align: center;
+  background-color: #264653;
+  color: #5BAF43;
+  z-index: 99;
+}
+
+.start-game > h1 {
+  font-size: 100px;
+  font-weight: 500;
+  padding: 30px 0;
+}
+
+.start-game > h3 {
+  font-size: 56px;
+  padding: 30px 0;
+}
+
+.start-game > p {
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+.start {
+  background-color: #5BAF43;
+  color: #264653;
+  font-family: "Bakbak One", cursive;
+  font-size: 22px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  margin-top: 2%;
+  padding: 12px 40px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  border: 2px solid #72A276;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.container {
+  border: 5px solid #32a852;
+  border-radius: 5px;
   background-image: url("../src/assets/bg.png");
   z-index: -1;
 }
@@ -77,29 +140,12 @@
   font-weight: bold;
 }
 
-.start {
-  background-color: #264653;
-  color: #8AE9C1;
-  font-size: 22px;
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translate(-50%, -30%);
-  margin-top: 2%;
-  padding: 12px 40px;
-  border-radius: 6px;
-  border: 2px solid #72A276;
-  cursor: pointer;
-  z-index: 1;
-}
-
 .game-board {
   display: flex;
   width: 600px;
   height: 400px;
   margin: 180px auto;
   flex-wrap: wrap;
-  z-index: 2;
 }
 
 .bush {

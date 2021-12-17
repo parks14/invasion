@@ -5,6 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/main.css" />
     <link rel="stylesheet" href="./src/styles/reset.css">
     <script src="./dist/main.js"></script>
@@ -13,43 +16,65 @@
 </head>
 
 <body>
-    <div class="logo">
-        <a href="https://github.com/parks14/invasion" target="blank"><img id="github-mark" src="./src/assets/GitHub-Mark-32px.png" alt="github logo"></a>
-        <a href="https://www.linkedin.com/in/sohee-park-b8164a112/" target="blank"><img id="linkedin-logo" src="./src/assets/LI-In-Bug.png" alt="linkedin logo" width="38px"></a>
-        <a href="https://angel.co/u/sohee-park-3" target="blank"><i class="fab fa-angellist fa-2x"></i></a>
-    </div>
+    <header class="header">
+        <h1>INVASION</h1>
+        <div class="logo">
+            <a href="https://github.com/parks14/invasion" target="blank"><img id="github-mark" src="./src/assets/GitHub-Mark-32px.png" alt="github logo"></a>
+            <a href="https://www.linkedin.com/in/sohee-park-b8164a112/" target="blank"><img id="linkedin-logo" src="./src/assets/LI-In-Bug.png" alt="linkedin logo" width="38px"></a>
+            <!-- <a href="https://angel.co/u/sohee-park-3" target="blank"><i class="fab fa-angellist"></i></a> -->
+            <a href="https://angel.co/u/sohee-park-3" target="blank" class="angellist"><img src="./src/assets/angellist.png"></a>
+        </div>
+    </header>
 
-    <div class="container"> 
-        <div class="score-text">SCORE</div>
-        <div class="score">0</div>
-        <div class="timer-text">TIMER</div>
-        <div class="timer"></div>
+    <div class="start-game">
+        <h1>INVASION</h1>
+        <p>Aliens have invaded!</p>
+        <p>They have entered the garden in disguise.</p>
+        <p>Do you have what it takes to protect your home from further invasion?</p>
+        <h3>INSTRUCTIONS</h3>
+        <p>Click and whack the aliens in diguise when they peek up from behind the bushes.</p>
+        <p>Can you get them all?</p>
         <button class="start">START</button>
     </div>
 
-    <div class="game-board">
-        <div class="bush b1">
-            <div class="monster back"></div>
-        </div>
+    <div class="last-wave">
+        <h1>Keep up the good work!</h1>
+        <p>Here comes the last wave...</p>
+        <p>Get ready, they are much faster!</p>
+    </div>
 
-        <div class="bush b2">
-            <div class="monster back"></div>
+    <div class="main-game">
+        <div class="container"> 
+            <div class="score-text">SCORE</div>
+            <div class="score">0</div>
+            <div class="timer-text">TIMER</div>
+            <div class="timer"></div>
         </div>
-
-        <div class="bush b3">
-            <div class="monster back"></div>
-        </div>
-
-        <div class="bush b4">
-            <div class="monster front"></div>
-        </div>
-
-        <div class="bush b5">
-            <div class="monster front"></div>
-        </div>
-
-        <div class="bush b6">
-            <div class="monster front"></div>
+    
+        <div class="game-board">
+            <div class="bush b1">
+                <div class="monster back"></div>
+            </div>
+    
+            <div class="bush b2">
+                <div class="monster back"></div>
+            </div>
+    
+            <div class="bush b3">
+                <div class="monster back"></div>
+            </div>
+    
+            <div class="bush b4">
+                <div class="monster front"></div>
+            </div>
+    
+            <div class="bush b5">
+                <div class="monster front"></div>
+            </div>
+    
+            <div class="bush b6">
+                <div class="monster front"></div>
+            </div>
         </div>
     </div>
 </body>
