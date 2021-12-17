@@ -1,33 +1,58 @@
-# Invasion
+![invasion](https://user-images.githubusercontent.com/88470703/146497412-8213fdea-9ed5-4f9c-acb4-5258fe761540.png)
 
 ## Background
 
-**Invasion** is a game inspired by the classic "Whack-a-mole" game. It is your job do whack as many "moles" in the given time and reach the highest score possible. Each mole has a different score value so make sure to get the moles with highest values first!
+[**Invasion**](http://soheepark.net/invasion/) is a game inspired by the classic "Whack-a-mole" game. The user has to defend by clicking and 'whacking' the aliens in disguise. Goal is to get the highest score possible.
 
-## Functionality & MVPs
+## Technologie Used
+* Invasion was built with vanilla JavaScript, HTML, and CSS.
 
-In **Invasion**, users will be able to:
-- Start and replay the game
-- Click on an object to increase their score
-- See the count of their current score
-- Keep track of the time left for the current game
+## Key Features
 
-In addition, this project will include:
-- An instructions section that will describe how the user can play
-- Background music effects
+### **Randomized Alien Positions**
 
-## Wireframes
+![radom](https://user-images.githubusercontent.com/88470703/146501737-77b717d3-fbcd-4a39-9a12-7b5ca82453ce.gif)
 
-![Wireframe Image](/src/assets/wireframe.png)
+The bushes at which the aliens peek out from are randomized by querying all HTML elements with the same class and using `Math.random`. The `setTimeout` function is used to set a timer for when the next alien is supposed to peek at the next random bush.
 
-- Nav links include links to my LinkedIn and project's Github
-- The main game board will be displayed on the center of the page
-- Start button user can click to start the game
-- Scrore count kept on the bottom right corner
-- Count of time left displayed on the top left corner
+```javascript
+//src/scrips/bush.js
 
-## Technologies, Libraries, APIs
+chooseRandomBush(bushes) {
+     let lastBush;
 
-This project will be implemented with the following technologies:
-- Webpack and Babel to bundle and transpile the source JavaScript code
-- npm to manage project dependencies
+     const randomBush = Math.floor(Math.random() * bushes.length);
+     const bush = bushes[randomBush];
+
+     if (bush === lastBush) {
+         return chooseRandomBush(bushes);
+     }
+
+     this.lastBush = bush;
+     return bush;
+}
+```
+
+```javascript
+//src/scripts/monster.js
+
+showUp() {
+     const bushes = document.querySelectorAll(".bush");
+     let bush = this.bush.chooseRandomBush(bushes);
+     bush.classList.add("up");
+
+     const time = Math.random() * 600 + 400;
+     setTimeout(() => {
+         bush.classList.remove("up");
+         if (!timeOut) {
+             this.showUp();
+         }
+     }, time);
+}
+```
+
+### **Animations**
+
+When user successfully "whacks" an alien in disguise, the alien will change in color.
+
+![Screen Recording 2021-12-17 at 2 00 48 AM](https://user-images.githubusercontent.com/88470703/146503234-6dbb9bae-122e-4f1f-bc5d-d88b4487f0d7.gif)
