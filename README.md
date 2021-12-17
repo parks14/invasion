@@ -7,14 +7,14 @@
 ## Functionality & MVPs
 
 In **Invasion**, users will be able to:
-- Start and reset the game
+- Start and replay the game
 - Click on an object to increase their score
 - See the count of their current score
 - Keep track of the time left for the current game
 
 In addition, this project will include:
-- An instructions section that will describe how the user can 
-- Background music/sound effects
+- An instructions section that will describe how the user can play
+- Background music effects
 
 ## Wireframes
 
