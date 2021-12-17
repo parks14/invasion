@@ -26,7 +26,7 @@ body {
     color: black;
 }
 
-.start-game, .container, .last-wave, .game-end {
+.main-game, .start-game, .container, .last-wave, .game-end {
     width: 900px;
     height: 600px;
     position: absolute;
@@ -90,7 +90,6 @@ body {
 }
 
 .continue, .replay {
-    /* width: 150px; */
     background-color: #5BAF43;
     color: #264653;
     font-family: 'Bakbak One', cursive;
@@ -197,12 +196,30 @@ body {
     font-weight: bold;
 }
 
+.music {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10%;
+    right: 13%;
+}
+
+.music > button > img {
+    width: 32px;
+}
+
+.music > button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
 
 .game-board {
     display: flex;
     width: 600px;
     height: 400px;
-    margin: 180px auto;
+    margin: 50px auto;
     flex-wrap: wrap;
 }
 

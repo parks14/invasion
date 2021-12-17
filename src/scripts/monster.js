@@ -12,7 +12,7 @@ export default class Monster {
         let bush = this.bush.chooseRandomBush(bushes);
         bush.classList.add("up");
 
-        const time = Math.random() * 700 + 500;
+        const time = Math.random() * 600 + 400;
         setTimeout(() => {
             bush.classList.remove("up");
             if (!timeOut) {

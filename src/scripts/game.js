@@ -22,6 +22,7 @@ export default class Game {
         scoreBoard.textContent = this.score;
         timerBoard.textContent = timer;
         timeOut = false
+        this.playMusic();
         
         // if (this.level === 2) {
         //     this.monster = new Monster(this.level);
@@ -113,6 +114,25 @@ export default class Game {
         }, 500)
         
         scoreBoard.textContent = this.score;
+    }
+
+    playMusic() {
+        const music = new Audio('./src/assets/music.mp3');
+        music.addEventListener('canplaythrough', e => {
+            music.play();
+        })
+
+        const muteButton = document.getElementById('mute');
+        const musicImg = document.getElementById('music-img')
+        muteButton.addEventListener('click', e => {
+            if (!music.muted) {
+                music.muted = true;
+                musicImg.src = './src/assets/mute.png'
+            } else {
+                music.muted = false;
+                musicImg.src = './src/assets/volume.png'
+            }
+        })
     }
 
 }
