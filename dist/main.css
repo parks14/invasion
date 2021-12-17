@@ -29,7 +29,7 @@ body {
   color: black;
 }
 
-.start-game, .container, .last-wave {
+.start-game, .container, .last-wave, .game-end {
   width: 900px;
   height: 600px;
   position: absolute;
@@ -38,12 +38,72 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.start-game {
+.start-game, .last-wave, .game-end {
   font-family: "Bakbak One", cursive;
   text-align: center;
   background-color: #264653;
   color: #5BAF43;
   z-index: 99;
+}
+
+.game-end {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-end > h1 {
+  font-size: 90px;
+}
+
+.game-end > h3 {
+  font-size: 50px;
+  padding: 15px 0;
+}
+
+.game-end > p {
+  font-size: 20px;
+  padding: 15px 0;
+}
+
+.total-score {
+  font-size: 80px;
+  border: 2px solid #5BAF43;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.last-wave {
+  display: none;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.last-wave > h1 {
+  font-size: 70px;
+  padding-bottom: 30px;
+}
+
+.last-wave > p {
+  font-size: 30px;
+  padding: 15px;
+}
+
+.continue, .replay {
+  /* width: 150px; */
+  background-color: #5BAF43;
+  color: #264653;
+  font-family: "Bakbak One", cursive;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 12px 40px;
+  margin-top: 50px;
+  border-radius: 6px;
+  border: 2px solid #72A276;
+  cursor: pointer;
 }
 
 .start-game > h1 {
